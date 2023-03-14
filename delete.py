@@ -19,12 +19,15 @@ def main():
     # db.session.commit()
   
 
-    flight = db.session.query(Flight).filter_by(id=2).first()
-    db.session.delete(flight)
-    db.session.commit()
+    # flight = db.session.query(Flight).filter_by(id=2).first()
+    # db.session.delete(flight)
+    # db.session.commit()
     
+    update = db.session.query(Flight).filter_by(id=24).first()
+    update.duration = 5500
+    db.session.commit()
 
-    # vuelos = Flight.query.all()
+    # vuelos = db.session.query(Flight).all()
     # for flight in vuelos:
     #     print(f"{flight.origin} to {flight.destination}, {flight.duration} minutes.")
 
