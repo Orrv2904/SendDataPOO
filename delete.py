@@ -23,11 +23,16 @@ def main():
     # db.session.delete(flight)
     # db.session.commit()
     
-    update = db.session.query(Flight).filter_by(id=24).first()
-    update.duration = 5500
-    db.session.commit()
+    # update = db.session.query(Flight).filter_by(id=24).first()
+    # update.duration = 5500
+    # db.session.commit()
+    
+    #  vuelos = db.session.query(Flight).filter_by(id=23).first()
+    # for flight in vuelos:
+    #     print(f"{flight.origin} to {flight.destination}, {flight.duration} minutes.")
 
-    # vuelos = db.session.query(Flight).all()
+    #Filter more specific
+    # vuelos = db.session.query(Flight).filter(Flight.origin != "vacalandia").all()
     # for flight in vuelos:
     #     print(f"{flight.origin} to {flight.destination}, {flight.duration} minutes.")
 
